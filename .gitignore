@@ -1,4 +1,13 @@
-# :::::::::::::::::::::: cut ::::::::::::::::::::::
+# Local & project files
+# -----------------------
+*~
+*.swp
+.DS_Store
+.DS_Store/
+.project/
+.vscode/
+.idea/
+
 
 # Put ignore patterns for build artifacts above the cut line
 # so they are ignored in the source repo and committed
@@ -91,6 +100,8 @@
 # files to other locations where it scaffolds files that are not
 # already ignored. We must also ignore these generated files.
 /web/**/.gitignore
+
+/db_backups/*
 
 
 # Other common rules

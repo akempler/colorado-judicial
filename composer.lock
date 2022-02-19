@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6031a447c10c8534edcf678e259f0df9",
+    "content-hash": "4e6d1be7e41132c49e1d7a81124bdc19",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1736,6 +1736,50 @@
             "time": "2021-05-07T20:47:33+00:00"
         },
         {
+            "name": "drupal/tara",
+            "version": "8.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tara.git",
+                "reference": "8.3.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tara-8.3.3.zip",
+                "reference": "8.3.3",
+                "shasum": "b3de6e8bb1a759c57c88335751d91fd03f8c0b4f"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "8.3.3",
+                    "datestamp": "1625672045",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ravis",
+                    "homepage": "https://www.drupal.org/user/79351"
+                }
+            ],
+            "description": "<p>Tara is a light weight modern Drupal 8, 9 theme by <a href=\"https://www.drupar.com/\" target=\"_blank\">Drupar.com</a></p><p><a href=\"https://www.drupar.com/theme/tara\" target=\"_blank\">Theme Homepage</a> | <a href=\"https://www.drupar.com/tara-theme-documentation\" target=\"_blank\">User Guide</a></p>",
+            "homepage": "https://www.drupal.org/project/tara",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tara"
+            }
+        },
+        {
             "name": "drush-ops/behat-drush-endpoint",
             "version": "9.4.1",
             "source": {
@@ -3038,7 +3082,7 @@
         },
         {
             "name": "pantheon-upstreams/upstream-configuration",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "upstream-configuration",

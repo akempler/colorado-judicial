@@ -1,0 +1,43 @@
+name: colorado-judicial
+recipe: drupal9
+
+config:
+  php: "7.4"
+  webroot: web
+  database: mysql:8.0
+
+services:
+  appserver:
+    run:
+      - composer install
+
+  node:
+    type: node:16
+    run:
+#      - yarn install
+
+#  solr-search:
+#    type: solr:8.6
+#    core: default
+#    portforward: true
+#    config:
+#      dir: config/solr-conf/search
+#    overrides:
+#      environment:
+#        LANDO_SOLR_DATADIR: /var/solr/data
+
+tooling:
+  gulp:
+    service: node
+  yarn:
+    service: node
+  phpcs:
+    service: appserver
+    cmd: vendor/bin/phpcs
+  phpunit:
+    service: appserver
+    cmd: vendor/bin/phpunit
+  drush:
+    service: appserver
+    env:
+      DRUSH_OPTIONS_URI: "http://colorado-judicial.lndo.site"
