@@ -21,3 +21,7 @@ h2.block__title {
   line-height: 1.4rem;
   color: #525555;
 }
+
+.views-row {
+  margin-bottom: 20px;
+}
