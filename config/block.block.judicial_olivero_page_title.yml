@@ -2,6 +2,8 @@ uuid: cb24dc3d-fd24-43e8-9937-8650e37b021d
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - judicial_olivero
 _core:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /node/6

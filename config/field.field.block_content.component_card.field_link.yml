@@ -1,0 +1,23 @@
+uuid: 17880318-0f9e-4bd1-bf86-44b517e57f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_card
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.component_card.field_link
+field_name: field_link
+entity_type: block_content
+bundle: component_card
+label: Link
+description: 'An optional link to display at the bottom of the card.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

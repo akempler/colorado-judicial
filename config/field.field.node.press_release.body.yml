@@ -1,18 +1,16 @@
-uuid: 741add53-8568-45f7-ba00-51617b6127ba
+uuid: 187e47eb-637e-48d5-8101-9c8a9b1e549b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.page
+    - node.type.press_release
   module:
     - text
-_core:
-  default_config_hash: KgVkxLl_K3E3lvN6CEoWQIDT0V8J4Mv-fVYrAIc7-FE
-id: node.page.body
+id: node.press_release.body
 field_name: body
 entity_type: node
-bundle: page
+bundle: press_release
 label: Body
 description: ''
 required: false

@@ -3,11 +3,43 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
-    - text
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      blacklisted_blocks: {  }
+      whitelisted_blocks:
+        'Custom block types':
+          - component_card
+          - component_text
+        'Inline blocks':
+          - 'inline_block:component_card'
+          - 'inline_block:component_text'
+      restricted_categories:
+        - 'Chaos Tools'
+        - 'Content fields'
+        - Help
+        - System
+        - User
+        - core
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
@@ -15,14 +47,10 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
+  links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
-  links:
     weight: 101
     region: content
-hidden: {  }
+hidden:
+  layout_builder__layout: true

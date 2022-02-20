@@ -1,0 +1,8 @@
+uuid: ad023002-70f0-4b62-9417-9aa6ebf893e9
+langcode: en
+status: true
+dependencies: {  }
+id: component_text
+label: 'Component - Text'
+revision: 0
+description: 'Provides a wysiwyg text field for creating text content.'

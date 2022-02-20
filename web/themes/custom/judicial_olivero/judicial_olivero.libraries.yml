@@ -3,3 +3,13 @@ global-styling:
   css:
     theme:
       css/base.css: {}
+    component:
+      css/components/blocks/card/card.css: { }
+      css/components/blocks/text/text.css: { }
+
+view-mode-card:
+  css:
+    theme:
+      css/components/content/card/card.css: {}
+  dependencies:
+    - judicial_olvero/more-link

@@ -46,6 +46,7 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  scheduler: 0
   search: 0
   settings_tray: 0
   shortcut: 0

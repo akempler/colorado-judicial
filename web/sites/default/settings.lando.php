@@ -25,3 +25,5 @@ $settings['trusted_host_patterns'][] = '^.*\.lndo\.site$';
 $settings['hash_salt'] = 'asdgaweoiuwa23570sdgih2398523kjhsdgsdsdgsdgs';
 
 $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
+
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';

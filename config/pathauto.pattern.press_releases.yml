@@ -1,0 +1,22 @@
+uuid: a0cf4b9a-3713-4859-9bb5-7a56fc3153d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: press_releases
+label: 'Press Releases'
+type: 'canonical_entities:node'
+pattern: '/media/press_releases/[node:title]'
+selection_criteria:
+  608c7ba2-3409-4828-b943-40b45d281418:
+    id: node_type
+    negate: false
+    uuid: 608c7ba2-3409-4828-b943-40b45d281418
+    context_mapping:
+      node: node
+    bundles:
+      press_release: press_release
+selection_logic: and
+weight: -5
+relationships: {  }

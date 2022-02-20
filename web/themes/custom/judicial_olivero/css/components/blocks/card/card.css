@@ -1,0 +1,20 @@
+/**
+* @file
+* This file is used to style the 'Card' component.
+*/
+
+.block-inline-blockcomponent-card {
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.block-inline-blockcomponent-card h2.block__title {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #525555;
+}
+
+.block .field:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
