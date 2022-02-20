@@ -1,0 +1,8 @@
+uuid: 8c6d3e93-5650-490a-b0c1-14db985a0c28
+langcode: en
+status: true
+dependencies: {  }
+id: component_card
+label: 'Component - Card'
+revision: 0
+description: 'Provides a card component which is useful for highlighting content.'

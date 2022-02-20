@@ -1,0 +1,21 @@
+uuid: 999b605c-535f-43d5-b652-aecc6571522e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_card
+    - field.storage.block_content.field_text
+  module:
+    - text
+id: block_content.component_card.field_text
+field_name: field_text
+entity_type: block_content
+bundle: component_card
+label: Text
+description: 'Provide some optional text. Text for cards should be limited to a maximum 200 characters.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,29 @@
+uuid: 1a052cf8-0bd9-4bb0-9fa9-943806f249d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_card
+    - field.storage.block_content.field_image
+    - media.type.image
+id: block_content.component_card.field_image
+field_name: field_image
+entity_type: block_content
+bundle: component_card
+label: Image
+description: 'An optional image to display at the top of the card.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
