@@ -1,0 +1,22 @@
+uuid: d2f22749-b255-4c52-bb8e-5f3d5805fc50
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - judicial_olivero
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: judicial_olivero_breadcrumbs
+theme: judicial_olivero
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

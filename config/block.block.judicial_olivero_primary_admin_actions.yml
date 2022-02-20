@@ -1,0 +1,20 @@
+uuid: be78fca4-16cc-4c9c-8f12-024b9845db2e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - judicial_olivero
+_core:
+  default_config_hash: sDmKoL9ejxB_fvD_qmgOHa8HN3X9AIsbud2xK8brMiI
+id: judicial_olivero_primary_admin_actions
+theme: judicial_olivero
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

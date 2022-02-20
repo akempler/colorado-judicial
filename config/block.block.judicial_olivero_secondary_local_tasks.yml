@@ -1,0 +1,22 @@
+uuid: 235ba034-ee61-4cb4-9928-3f736482d9e4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - judicial_olivero
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: judicial_olivero_secondary_local_tasks
+theme: judicial_olivero
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: caca560e-48cf-4cfd-a780-4c77e309488c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - judicial_olivero
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: judicial_olivero_site_branding
+theme: judicial_olivero
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
