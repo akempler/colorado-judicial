@@ -1,0 +1,8 @@
+# All action links for this module
+
+elemental_dash.elemental_dash_add:
+  route_name: elemental_dash.elemental_dash_add
+  title: 'Add Dashboard'
+
+  appears_on:
+    - entity.elemental_dash.collection

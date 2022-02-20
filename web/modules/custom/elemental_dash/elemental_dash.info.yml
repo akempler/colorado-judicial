@@ -1,0 +1,8 @@
+name: Elemental Dashboard
+type: module
+package: Elemental
+description: 'Provide user dashboards.'
+core_version_requirement: ^8 || ^9
+php: 7.1
+dependencies:
+  - drupal:user

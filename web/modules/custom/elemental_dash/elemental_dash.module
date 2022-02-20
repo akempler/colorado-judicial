@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Contains elemental_dash.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function elemental_dash_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.elemental_dash':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('View user dashboards.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function elemental_dash_preprocess_html(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.elemental_dash.canonical') {
+    $variables['attributes']['class'][] = 'elemental_dash';
+    $variables['#attached']['library'][] = 'elemental_dash/elemental_dash';
+  }
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function elemental_dash_user_login(AccountInterface $account) {
+
+  $userRoles = $account->getRoles();
+  if (in_array('administrator', $userRoles)) {
+    $role = 'administrator';
+  }
+  else {
+    $role = array_pop($userRoles);
+  }
+
+  $current_request = \Drupal::service('request_stack')->getCurrentRequest();
+  if (!$current_request->query->get('destination') && ($role)) {
+
+    $config = \Drupal::config('elemental_dash.settings');
+    $dashboard = $config->get($role);
+    if ($dashboard) {
+      $current_request->query->set(
+        'destination',
+        Url::fromRoute('entity.elemental_dash.canonical', ['elemental_dash' => $dashboard])->toString()
+      );
+    }
+  }
+}
