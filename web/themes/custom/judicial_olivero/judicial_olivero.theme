@@ -1,8 +1,13 @@
 <?php
 
 /**
+ * @file
+ * Functions to support theming in the Umami theme.
+ */
+
+/**
  * Implements hook_preprocess_HOOK() for HTML document templates.
  */
 function umami_preprocess_html(&$variables) {
-    $variables['#attached']['library'][] = 'umami/two-columns';
+  $variables['#attached']['library'][] = 'umami/two-columns';
 }

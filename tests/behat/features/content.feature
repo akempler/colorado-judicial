@@ -35,7 +35,7 @@ Feature: Content
     | name      | status | mail             |
     | Test user |      1 | test@example.com |
     When I am logged in as "Test user"
-    Then I should see the link "My account"
+    Then I should see "Member for"
 
   @api
   Scenario: Create many terms
