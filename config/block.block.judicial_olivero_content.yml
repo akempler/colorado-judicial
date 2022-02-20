@@ -1,0 +1,22 @@
+uuid: 6be71f3d-ddae-41e2-b0a0-7f799713b1d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - judicial_olivero
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: judicial_olivero_content
+theme: judicial_olivero
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

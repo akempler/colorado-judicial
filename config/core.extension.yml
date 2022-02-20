@@ -1,6 +1,8 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  admin_toolbar: 0
+  admin_toolbar_tools: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -9,21 +11,32 @@ module:
   ckeditor: 0
   color: 0
   comment: 0
+  components: 0
   config: 0
   contact: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
   help: 0
   history: 0
   image: 0
+  inline_form_errors: 0
+  layout_builder: 0
+  layout_builder_modal: 0
+  layout_builder_restrictions: 0
+  layout_discovery: 0
   link: 0
+  media: 0
+  media_library: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0
@@ -31,18 +44,31 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  quickedit: 0
   rdf: 0
   search: 0
+  settings_tray: 0
   shortcut: 0
+  statistics: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
+  tracker: 0
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
+  webform_submission_export_import: 0
+  webform_submission_log: 0
+  webform_templates: 0
+  webform_ui: 0
+  pathauto: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   bartik: 0
@@ -50,4 +76,6 @@ theme:
   claro: 0
   stable: 0
   tara: 0
+  olivero: 0
+  judicial_olivero: 0
 profile: standard

@@ -1,0 +1,22 @@
+uuid: e419fef5-dc15-459d-bd73-eacc8dcf4327
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - judicial_olivero
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: judicial_olivero_powered
+theme: judicial_olivero
+region: footer_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
