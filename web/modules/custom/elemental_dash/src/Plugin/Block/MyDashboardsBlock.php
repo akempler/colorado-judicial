@@ -5,6 +5,7 @@ namespace Drupal\elemental_dash\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\elemental_dash\Entity\ElementalDash;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -37,6 +38,13 @@ class MyDashboardsBlock extends BlockBase implements ContainerFactoryPluginInter
   protected $entityTypeManager;
 
   /**
+   * The current route match.
+   *
+   * @var \Drupal\Core\Routing\RouteMatchInterface
+   */
+  protected $routeMatch;
+
+  /**
    * Constructs a new SwitchUserBlock object.
    *
    * @param array $configuration
@@ -49,11 +57,14 @@ class MyDashboardsBlock extends BlockBase implements ContainerFactoryPluginInter
    *   Current user.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager.
+   * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+   *   A RouteMatch object.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, AccountInterface $current_user, EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, AccountInterface $current_user, EntityTypeManagerInterface $entity_type_manager, RouteMatchInterface $route_match) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->currentUser = $current_user;
     $this->entityTypeManager = $entity_type_manager;
+    $this->routeMatch = $route_match;
   }
 
   /**
@@ -65,7 +76,8 @@ class MyDashboardsBlock extends BlockBase implements ContainerFactoryPluginInter
       $plugin_id,
       $plugin_definition,
       $container->get('current_user'),
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('current_route_match')
     );
   }
 
@@ -74,15 +86,14 @@ class MyDashboardsBlock extends BlockBase implements ContainerFactoryPluginInter
    */
   public function build() {
 
-    $user = \Drupal::currentUser();
-    $user_roles = $user->getRoles();
+    $user_roles = $this->currentUser->getRoles();
 
     $output = '';
     $dashboards = $this->entityTypeManager->getStorage('elemental_dash')
       ->loadMultiple();
     if (($dashboards) && count($dashboards)) {
 
-      $current_dashboard = \Drupal::routeMatch()->getParameter('elemental_dash');
+      $current_dashboard = $this->routeMatch->getParameter('elemental_dash');
       if ($current_dashboard instanceof ElementalDash) {
         $current_id = $current_dashboard->id();
       }
@@ -90,7 +101,7 @@ class MyDashboardsBlock extends BlockBase implements ContainerFactoryPluginInter
       $output .= '<nav class="is-horizontal position-container is-horizontal-enabled">';
       $output .= '<ul class="tabs secondary clearfix">';
       foreach ($dashboards as $dashboard) {
-        if ((\Drupal::currentUser()->hasPermission('view dashboard ' . $dashboard->id())) ||
+        if (($this->currentUser->hasPermission('view dashboard ' . $dashboard->id())) ||
           (in_array('administrator', $user_roles))) {
 
           $options = [
@@ -98,7 +109,7 @@ class MyDashboardsBlock extends BlockBase implements ContainerFactoryPluginInter
             'attributes' => ['class' => 'this-class'],
           ];
           $dashboard_title = Markup::create('<span>' . $dashboard->getName() . '</span>');
-          $link_object = Link::createFromRoute(t('@title', ['@title' => $dashboard_title]), 'entity.elemental_dash.canonical', ['elemental_dash' => $dashboard->id()], $options);
+          $link_object = Link::createFromRoute($this->t('@title', ['@title' => $dashboard_title]), 'entity.elemental_dash.canonical', ['elemental_dash' => $dashboard->id()], $options);
 
           $class = 'tabs__tab';
           if ($dashboard->id() == $current_id) {

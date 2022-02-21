@@ -82,7 +82,7 @@ class ElementalDashSettingsForm extends ConfigFormBase {
 
     $form['role_dashboard'] = [
       '#type' => 'fieldset',
-      '#title' => t('Dashboard Roles'),
+      '#title' => $this->t('Dashboard Roles'),
       '#collapsible' => FALSE,
       '#collapsed' => FALSE,
       '#tree' => TRUE,
@@ -90,14 +90,14 @@ class ElementalDashSettingsForm extends ConfigFormBase {
 
     $form['role_dashboard']['description'] = [
       '#type' => 'markup',
-      '#markup' => t('For each role, select a dashboard to redirect to upon logging in. If none is selected, the role will not be redirected.'),
+      '#markup' => $this->t('For each role, select a dashboard to redirect to upon logging in. If none is selected, the role will not be redirected.'),
     ];
 
     foreach ($roles as $role_machine_name => $role_name) {
       $form['role_dashboard'][$role_machine_name] = [
         '#type' => 'select',
         '#empty_value' => '',
-        '#title' => t('@role_name', ['@role_name' => $role_name]),
+        '#title' => $this->t('@role_name', ['@role_name' => $role_name]),
         '#default_value' => [$config->get($role_machine_name)],
         '#options' => $options,
       ];
