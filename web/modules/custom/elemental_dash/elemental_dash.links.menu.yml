@@ -1,0 +1,25 @@
+# Define the menu links for this module
+
+entity.elemental_dash.settings:
+  title: 'User Dashboards'
+  route_name: entity.elemental_dash.admin_form
+  weight: 400
+  parent: user.admin_index
+entity.elemental_dash.collection:
+  title: 'List Dashboards'
+  route_name: entity.elemental_dash.collection
+  description: 'List Dashboards'
+  weight: 401
+  parent: entity.elemental_dash.settings
+entity.elemental_dash.admin_form:
+  title: 'Dashboard settings'
+  parent: entity.elemental_dash.settings
+  description: 'Configure default dashboard settings, including fields.'
+  weight: 403
+  route_name: entity.elemental_dash.admin_form
+elemental.dashboard:
+  title: Elemental
+  route_name: elemental_dash.dashboard
+  description: 'Elemental Dashboard'
+  parent: user.page
+  weight: 100

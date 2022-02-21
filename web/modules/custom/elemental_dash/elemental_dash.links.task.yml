@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+elemental_dash.elemental_dash_settings_tab:
+  route_name: entity.elemental_dash.admin_form
+  title: Settings
+  base_route: entity.elemental_dash.admin_form
+
+elemental_dash.view:
+  route_name: entity.elemental_dash.canonical
+  base_route: entity.elemental_dash.canonical
+  title: View
+
+elemental_dash.page_edit:
+  route_name: entity.elemental_dash.edit_form
+  base_route: entity.elemental_dash.canonical
+  title: Edit
+
+elemental_dash.delete_confirm:
+  route_name:  entity.elemental_dash.delete_form
+  base_route:  entity.elemental_dash.canonical
+  title: Delete
+  weight: 10

@@ -1,0 +1,59 @@
+entity.elemental_dash.canonical:
+  path: '/admin/dashboard/{elemental_dash}'
+  defaults:
+    _entity_view: 'elemental_dash'
+    _title: 'Dashboard'
+  requirements:
+    _custom_access: '\Drupal\elemental_dash\ElementalDashPermissions::access'
+  options:
+    _admin_route: TRUE
+
+entity.elemental_dash.collection:
+  path: '/admin/dashboard/list'
+  defaults:
+    _entity_list: 'elemental_dash'
+    _title: 'Dashboard List'
+  requirements:
+    _permission: 'administer dashboards'
+
+elemental_dash.elemental_dash_add:
+  path: '/admin/dashboard/add'
+  defaults:
+    _entity_form: elemental_dash.add
+    _title: 'Add Dashboard'
+  requirements:
+    _entity_create_access: 'elemental_dash'
+
+entity.elemental_dash.admin_form:
+  path: '/admin/dashboard/settings'
+  defaults:
+    _form: '\Drupal\elemental_dash\ElementalDashSettingsForm'
+    _title: 'Edit Dashboard'
+  requirements:
+    _permission: 'administer dashboards'
+
+entity.elemental_dash.edit_form:
+  path: '/admin/dashboard/{elemental_dash}/edit'
+  defaults:
+    _entity_form: elemental_dash.edit
+    _title: 'Edit Dashboard'
+  requirements:
+    _entity_access: 'elemental_dash.edit'
+
+entity.elemental_dash.delete_form:
+  path: '/admin/dashboard/{elemental_dash}/delete'
+  defaults:
+    _entity_form: elemental_dash.delete
+    _title: 'Delete Dashboard'
+  requirements:
+    _entity_access: 'elemental_dash.delete'
+
+elemental_dash.dashboard:
+  path: '/admin/dashboard'
+  defaults:
+    _controller: '\Drupal\elemental_dash\Controller\ElementalDashController::dashboardSelector'
+    _title: 'Dashboard'
+  requirements:
+    _custom_access: '\Drupal\elemental_dash\ElementalDashPermissions::access'
+  options:
+    _admin_route: TRUE

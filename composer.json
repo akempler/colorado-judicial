@@ -24,6 +24,7 @@
         "drupal/field_group": "^3.2",
         "drupal/layout_builder_modal": "^1.1",
         "drupal/layout_builder_restrictions": "^2.12",
+        "drupal/media_library_theme_reset": "^1.1",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.9",
         "drupal/scheduler": "^1.4",
@@ -67,7 +68,8 @@
             "file-mapping": {
                 "[project-root]\/.editorconfig": false,
                 "[project-root]\/pantheon.upstream.yml": false,
-                "[project-root]\/.gitattributes": false
+                "[project-root]\/.gitattributes": false,
+                "[web-root]/sites/development.services.yml": false
             }
         },
         "installer-paths": {

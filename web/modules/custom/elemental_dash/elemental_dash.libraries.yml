@@ -1,0 +1,5 @@
+elemental_dash:
+  version: 1.0
+  css:
+    theme:
+      assets/css/elemental_dash.css: {}

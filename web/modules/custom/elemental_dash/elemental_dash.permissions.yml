@@ -1,0 +1,16 @@
+access dashboard:
+  title: 'Access Dashboards'
+view dashboard:
+  title: 'View Any Dashboard'
+add dashboard:
+  title: 'Add Dashboard'
+edit dashboard:
+  title: 'Edit Any Dashboard'
+delete dashboard:
+  title: 'Delete Any Dashboard'
+administer dashboard:
+  title: 'Administer Dashboards'
+  restrict access: TRUE
+
+permission_callbacks:
+  - '\Drupal\elemental_dash\ElementalDashPermissions::dashTypePermissions'

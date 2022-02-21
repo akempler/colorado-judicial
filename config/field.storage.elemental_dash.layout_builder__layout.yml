@@ -1,0 +1,19 @@
+uuid: 7a5ce664-606f-47b4-bdf8-c591a7c53dca
+langcode: en
+status: true
+dependencies:
+  module:
+    - elemental_dash
+    - layout_builder
+id: elemental_dash.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: elemental_dash
+type: layout_section
+settings: {  }
+module: layout_builder
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
