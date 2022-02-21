@@ -47,3 +47,13 @@ entity.elemental_dash.delete_form:
     _title: 'Delete Dashboard'
   requirements:
     _entity_access: 'elemental_dash.delete'
+
+elemental_dash.dashboard:
+  path: '/admin/dashboard'
+  defaults:
+    _controller: '\Drupal\elemental_dash\Controller\ElementalDashController::dashboardSelector'
+    _title: 'Dashboard'
+  requirements:
+    _custom_access: '\Drupal\elemental_dash\ElementalDashPermissions::access'
+  options:
+    _admin_route: TRUE

@@ -17,3 +17,9 @@ entity.elemental_dash.admin_form:
   description: 'Configure default dashboard settings, including fields.'
   weight: 403
   route_name: entity.elemental_dash.admin_form
+elemental.dashboard:
+  title: Elemental
+  route_name: elemental_dash.dashboard
+  description: 'Elemental Dashboard'
+  parent: user.page
+  weight: 100
