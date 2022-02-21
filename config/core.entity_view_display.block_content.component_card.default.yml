@@ -7,8 +7,10 @@ dependencies:
     - field.field.block_content.component_card.field_image
     - field.field.block_content.component_card.field_link
     - field.field.block_content.component_card.field_text
+    - image.style.card
   module:
     - link
+    - media
     - text
 id: block_content.component_card.default
 targetEntityType: block_content
@@ -16,11 +18,11 @@ bundle: component_card
 mode: default
 content:
   field_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: card
     third_party_settings: {  }
     weight: 0
     region: content

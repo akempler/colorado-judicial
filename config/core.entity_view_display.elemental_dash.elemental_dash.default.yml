@@ -45,4 +45,5 @@ content:
     third_party_settings: {  }
     weight: -4
     region: content
-hidden: {  }
+hidden:
+  layout_builder__layout: true
