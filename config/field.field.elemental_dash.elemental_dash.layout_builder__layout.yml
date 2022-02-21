@@ -1,0 +1,21 @@
+uuid: 4a82a5b5-e7ff-4707-9db2-aa4c1cbba1e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.elemental_dash.layout_builder__layout
+  module:
+    - elemental_dash
+    - layout_builder
+id: elemental_dash.elemental_dash.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: elemental_dash
+bundle: elemental_dash
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

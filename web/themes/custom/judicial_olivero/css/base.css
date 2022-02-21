@@ -25,3 +25,24 @@ h2.block__title {
 .views-row {
   margin-bottom: 20px;
 }
+
+@media (min-width: 43.75rem) {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.75rem;
+    margin-bottom: .5rem;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .text-content p, .cke_editable p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  h1 {
+    font-size: 3.0rem;
+    line-height: 3.25rem;
+  }
+}
