@@ -65,7 +65,7 @@ class ElementalDashController extends ControllerBase {
       $role = array_pop($userRoles);
     }
 
-    $config = \Drupal::config('elemental_dash.settings');
+    $config = $this->config('elemental_dash.settings');
     $dashboard = $config->get($role);
 
     return $this->redirect('entity.elemental_dash.canonical', ['elemental_dash' => $dashboard]);

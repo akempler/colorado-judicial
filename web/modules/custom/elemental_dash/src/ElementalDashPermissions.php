@@ -10,6 +10,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Provides permissions for the Elemental Dash module.
@@ -33,16 +34,26 @@ class ElementalDashPermissions implements ContainerInjectionInterface {
   protected $configFactory;
 
   /**
+   * The current route match.
+   *
+   * @var \Drupal\Core\Routing\RouteMatchInterface
+   */
+  protected $routeMatch;
+
+  /**
    * Constructs a new ElementalDashPermissions instance.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The factory for configuration objects.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager service.
+   * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+   *   A RouteMatch object.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager, RouteMatchInterface $route_match) {
     $this->entityTypeManager = $entity_type_manager;
     $this->configFactory = $config_factory;
+    $this->routeMatch = $route_match;
   }
 
   /**
@@ -51,7 +62,8 @@ class ElementalDashPermissions implements ContainerInjectionInterface {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('config.factory'),
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('current_route_match')
     );
   }
 
@@ -92,7 +104,7 @@ class ElementalDashPermissions implements ContainerInjectionInterface {
    *   The access result.
    */
   public function access(AccountInterface $account) {
-    $dashboard = \Drupal::routeMatch()->getParameter('elemental_dash');
+    $dashboard = $this->routeMatch->getParameter('elemental_dash');
     if ($dashboard instanceof ElementalDash) {
       $id = $dashboard->id();
     }
