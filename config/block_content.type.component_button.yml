@@ -1,0 +1,8 @@
+uuid: dbf0434f-3538-47ff-bf9f-27808cc31d11
+langcode: en
+status: true
+dependencies: {  }
+id: component_button
+label: 'Component - Button'
+revision: 0
+description: 'A button component.'

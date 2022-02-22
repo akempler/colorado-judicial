@@ -1,0 +1,23 @@
+uuid: ebc74459-d9b2-40a0-a7c7-6b44ffb966e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_button
+    - field.storage.block_content.field_button_link
+  module:
+    - link
+id: block_content.component_button.field_button_link
+field_name: field_button_link
+entity_type: block_content
+bundle: component_button
+label: Link
+description: 'Add a link for the button. Can be internal or external.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

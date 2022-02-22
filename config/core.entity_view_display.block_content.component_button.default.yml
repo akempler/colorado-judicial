@@ -1,0 +1,27 @@
+uuid: d96b5606-8236-4b78-938c-3b522c84fe1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_button
+    - field.field.block_content.component_button.field_button_link
+  module:
+    - link
+id: block_content.component_button.default
+targetEntityType: block_content
+bundle: component_button
+mode: default
+content:
+  field_button_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
