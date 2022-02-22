@@ -52,3 +52,11 @@ h2.block__title {
     line-height: 3.25rem;
   }
 }
+
+.block-inline-blockcomponent-banner h2 {
+  margin-bottom: .5rem;
+}
+
+.block-inline-blockcomponent-banner .field--name-field-banner-subheading {
+  margin-bottom: .5rem;
+}
