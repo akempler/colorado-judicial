@@ -1,0 +1,19 @@
+uuid: 6a2a2950-285a-408d-8e76-d1631d2525bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_banner
+    - field.storage.block_content.field_banner_subheading
+id: block_content.component_banner.field_banner_subheading
+field_name: field_banner_subheading
+entity_type: block_content
+bundle: component_banner
+label: 'Banner Subheading'
+description: 'An optional subheading to display on the banner.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

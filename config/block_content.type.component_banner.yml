@@ -1,0 +1,8 @@
+uuid: ff5b15c7-5119-4d0b-ad09-c0f680ecb11e
+langcode: en
+status: true
+dependencies: {  }
+id: component_banner
+label: 'Component - Banner'
+revision: 0
+description: 'Provide a banner, useful for page headers. Can include an image, title, and subtitle.'

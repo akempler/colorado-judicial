@@ -28,9 +28,11 @@ third_party_settings:
       blacklisted_blocks: {  }
       whitelisted_blocks:
         'Custom block types':
+          - component_banner
           - component_card
           - component_text
         'Inline blocks':
+          - 'inline_block:component_banner'
           - 'inline_block:component_card'
           - 'inline_block:component_text'
       restricted_categories:
