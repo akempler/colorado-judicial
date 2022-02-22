@@ -1,0 +1,31 @@
+uuid: ee0b8c52-7356-4646-85bd-c77e3664a429
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_button
+    - field.field.block_content.component_button.field_button_link
+  module:
+    - link
+id: block_content.component_button.default
+targetEntityType: block_content
+bundle: component_button
+mode: default
+content:
+  field_button_link:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
