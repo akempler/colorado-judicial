@@ -22,5 +22,5 @@ terminus backup:get $SITE --element=db --to=$SITE-backup.sql.gz
 # Assumes this is run within the codebase
 #drush sql-drop -y && drush sqlc < $SITE-backup.sql
 # Delete archive
-lando db-import $SITE-backup.sql.gz
+lando db-import --no-wipe $SITE-backup.sql.gz
 rm $SITE-backup.sql

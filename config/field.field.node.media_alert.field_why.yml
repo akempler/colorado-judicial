@@ -1,0 +1,21 @@
+uuid: 397936d1-beb3-4fd8-82da-e9a797928213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_why
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.field_why
+field_name: field_why
+entity_type: node
+bundle: media_alert
+label: Why
+description: 'Describe the details of the alert'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

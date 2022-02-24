@@ -1,0 +1,21 @@
+uuid: 78fb516f-e0c1-446e-83a2-4223da99ae3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_how
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.field_how
+field_name: field_how
+entity_type: node
+bundle: media_alert
+label: How
+description: 'Provide any additional logistical information (e.g. webex link, covid restrictions etc.)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

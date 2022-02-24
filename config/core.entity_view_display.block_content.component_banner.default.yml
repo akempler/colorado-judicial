@@ -6,7 +6,7 @@ dependencies:
     - block_content.type.component_banner
     - field.field.block_content.component_banner.field_banner_image
     - field.field.block_content.component_banner.field_banner_subheading
-    - image.style.banner
+    - image.style.big_banner
   module:
     - media
 id: block_content.component_banner.default
@@ -19,7 +19,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: banner
+      image_style: big_banner
     third_party_settings: {  }
     weight: 2
     region: content

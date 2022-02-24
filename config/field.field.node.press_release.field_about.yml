@@ -1,0 +1,24 @@
+uuid: 251e5bea-8b4b-4093-8bea-528d3fac9989
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about
+    - node.type.press_release
+  module:
+    - text
+id: node.press_release.field_about
+field_name: field_about
+entity_type: node
+bundle: press_release
+label: About
+description: 'Describe the organization that is distributing this release.'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>The mission of the Colorado Judicial Branch is to provide a fair and impartial system of justice that:</p>\r\n\r\n<ul>\r\n\t<li>Protects constitutional and statutory rights and liberties</li>\r\n\t<li>Assures equal access</li>\r\n\t<li>Provides fair, timely and constructive resolution of cases</li>\r\n\t<li>Enhances public safety</li>\r\n\t<li>Supervises offenders</li>\r\n\t<li>Facilitates victim and community reparation</li>\r\n</ul>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long
