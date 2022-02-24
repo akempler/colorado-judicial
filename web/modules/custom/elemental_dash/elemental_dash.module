@@ -6,7 +6,6 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\Core\Session\AccountInterface;
 
 /**
  * Implements hook_help().
@@ -31,19 +30,4 @@ function elemental_dash_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'elemental_dash';
     $variables['#attached']['library'][] = 'elemental_dash/elemental_dash';
   }
-}
-
-/**
- * Implements hook_user_login().
- */
-function elemental_dash_user_login(AccountInterface $account) {
-
-  $userRoles = $account->getRoles();
-  if (in_array('administrator', $userRoles)) {
-    $role = 'administrator';
-  }
-  else {
-    $role = array_pop($userRoles);
-  }
-
 }
