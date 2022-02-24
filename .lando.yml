@@ -5,15 +5,27 @@ config:
   php: "7.4"
   webroot: web
   database: mysql:8.0
+  xdebug: true
+  via: nginx
 
 services:
   appserver:
     run:
       - composer install
+    overrides:
+      environment:
+        LANDO_HOST_IP: host.docker.internal
+        XDEBUG_CONFIG: client_host=host.docker.internal
 
   node:
     type: node:16
     run:
+
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
 #      - yarn install
 
 #  solr-search:
@@ -41,3 +53,20 @@ tooling:
     service: appserver
     env:
       DRUSH_OPTIONS_URI: "http://colorado-judicial.lndo.site"
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for nginx.
+    cmd:
+      - rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini -f
+      - docker-php-ext-enable xdebug
+      - pkill -o -USR2 php-fpm
+      - echo "Xdebug enabled"
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for nginx.
+    cmd:
+      - rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini -f
+      - pkill -o -USR2 php-fpm
+      - echo "Xdebug disabled"
+    user: root
