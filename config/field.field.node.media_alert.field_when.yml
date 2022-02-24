@@ -1,0 +1,21 @@
+uuid: 4f757ce3-d149-409f-a8e7-a55bd7e01ced
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_when
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.field_when
+field_name: field_when
+entity_type: node
+bundle: media_alert
+label: When
+description: 'Provide any date/time information'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

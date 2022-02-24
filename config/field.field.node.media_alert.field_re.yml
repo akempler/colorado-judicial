@@ -1,0 +1,21 @@
+uuid: bdff5603-8818-4b83-97a5-ef4438ba6a67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_re
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.field_re
+field_name: field_re
+entity_type: node
+bundle: media_alert
+label: Re
+description: 'What is the subject of this media alert'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

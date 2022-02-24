@@ -1,0 +1,21 @@
+uuid: 2e25ab68-9156-4d8b-b06a-4b7c0df53a99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_to
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.field_to
+field_name: field_to
+entity_type: node
+bundle: media_alert
+label: To
+description: 'Who is this media alert directed at? (e.g. Pueblo area media)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

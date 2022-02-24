@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.storage.node.field_release_date
     - node.type.press_release
   module:
+    - datetime
     - node
     - user
 id: press_releases
@@ -248,15 +250,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        created:
-          id: created
-          table: node_field_revision
-          field: created
+        field_release_date:
+          id: field_release_date
+          table: node__field_release_date
+          field: field_release_date
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
           plugin_id: field
           label: ''
           exclude: false
@@ -300,11 +300,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: datetime_default
           settings:
-            date_format: medium
-            custom_date_format: ''
-            timezone: ''
+            timezone_override: ''
+            format_type: olivero_medium
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -337,7 +336,8 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_release_date'
   page_1:
     id: page_1
     display_title: Page

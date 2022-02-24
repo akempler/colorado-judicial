@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.press_release.body
+    - field.field.node.press_release.field_about
+    - field.field.node.press_release.field_release_date
     - node.type.press_release
   module:
+    - datetime
     - text
     - user
 id: node.press_release.default
@@ -18,11 +21,27 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 2
+    region: content
+  field_about:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_release_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 51ce47d3-631e-462f-9c0a-181067377d49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_from
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.field_from
+field_name: field_from
+entity_type: node
+bundle: media_alert
+label: From
+description: 'Who is sending this alert (e.g. 10th Judicial District)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

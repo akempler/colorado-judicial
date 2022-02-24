@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.press_release.body
+    - field.field.node.press_release.field_about
+    - field.field.node.press_release.field_release_date
     - node.type.press_release
   module:
     - text
@@ -27,4 +29,6 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_about: true
+  field_release_date: true

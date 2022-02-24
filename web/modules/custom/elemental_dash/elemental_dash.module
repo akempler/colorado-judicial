@@ -48,7 +48,7 @@ function elemental_dash_user_login(AccountInterface $account) {
   }
 
   $current_request = \Drupal::service('request_stack')->getCurrentRequest();
-  if (!$current_request->query->get('destination') && ($role)) {
+  if (!$current_request->query->has('destination') && ($role)) {
 
     $config = \Drupal::config('elemental_dash.settings');
     $dashboard = $config->get($role);
@@ -58,5 +58,8 @@ function elemental_dash_user_login(AccountInterface $account) {
         Url::fromRoute('entity.elemental_dash.canonical', ['elemental_dash' => $dashboard])->toString()
       );
     }
+  }
+  else {
+    $current_request->query->set('destination', $current_request->request->get('destination'));
   }
 }

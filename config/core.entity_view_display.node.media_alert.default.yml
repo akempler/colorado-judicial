@@ -1,0 +1,108 @@
+uuid: be477da1-f9e7-4880-bc7c-92c1eb9a9dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.media_alert.body
+    - field.field.node.media_alert.field_from
+    - field.field.node.media_alert.field_how
+    - field.field.node.media_alert.field_issues
+    - field.field.node.media_alert.field_re
+    - field.field.node.media_alert.field_to
+    - field.field.node.media_alert.field_what
+    - field.field.node.media_alert.field_when
+    - field.field.node.media_alert.field_where
+    - field.field.node.media_alert.field_who
+    - field.field.node.media_alert.field_why
+    - node.type.media_alert
+  module:
+    - text
+    - user
+id: node.media_alert.default
+targetEntityType: node
+bundle: media_alert
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_from:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_how:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_issues:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_re:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_to:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_what:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_when:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_where:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_who:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_why:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

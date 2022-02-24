@@ -1,0 +1,23 @@
+uuid: e2513afb-16e5-40df-9a98-e873abf403cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.body
+field_name: body
+entity_type: node
+bundle: media_alert
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

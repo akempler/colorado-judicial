@@ -1,0 +1,21 @@
+uuid: 5a7410da-7b14-469c-9e1d-4dcf9c0985a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_where
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.field_where
+field_name: field_where
+entity_type: node
+bundle: media_alert
+label: Where
+description: 'Provide any relevant location information'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

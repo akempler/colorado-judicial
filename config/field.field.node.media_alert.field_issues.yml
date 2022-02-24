@@ -1,0 +1,21 @@
+uuid: a253a73d-c806-4d4b-8b68-6e5dfebc8ef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issues
+    - node.type.media_alert
+  module:
+    - text
+id: node.media_alert.field_issues
+field_name: field_issues
+entity_type: node
+bundle: media_alert
+label: Issues
+description: 'Provide any other information about what this media alert covers'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

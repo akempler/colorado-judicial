@@ -1,0 +1,50 @@
+uuid: b8934557-4af9-4751-9975-aacfefc1fed4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.media_alert.body
+    - field.field.node.media_alert.field_from
+    - field.field.node.media_alert.field_how
+    - field.field.node.media_alert.field_issues
+    - field.field.node.media_alert.field_re
+    - field.field.node.media_alert.field_to
+    - field.field.node.media_alert.field_what
+    - field.field.node.media_alert.field_when
+    - field.field.node.media_alert.field_where
+    - field.field.node.media_alert.field_who
+    - field.field.node.media_alert.field_why
+    - node.type.media_alert
+  module:
+    - text
+    - user
+id: node.media_alert.teaser
+targetEntityType: node
+bundle: media_alert
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_from: true
+  field_how: true
+  field_issues: true
+  field_re: true
+  field_to: true
+  field_what: true
+  field_when: true
+  field_where: true
+  field_who: true
+  field_why: true

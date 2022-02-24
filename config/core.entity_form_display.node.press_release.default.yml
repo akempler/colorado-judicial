@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.press_release.body
+    - field.field.node.press_release.field_about
+    - field.field.node.press_release.field_release_date
     - node.type.press_release
   module:
+    - datetime
     - path
     - scheduler
     - text
@@ -27,6 +30,20 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_about:
+    type: text_textarea
+    weight: 123
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_release_date:
+    type: datetime_default
+    weight: 122
     region: content
     settings: {  }
     third_party_settings: {  }

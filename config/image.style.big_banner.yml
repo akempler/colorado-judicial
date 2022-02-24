@@ -1,0 +1,15 @@
+uuid: a96be5f0-bb7e-4a6e-8bda-ca1c6138ed41
+langcode: en
+status: true
+dependencies: {  }
+name: big_banner
+label: 'big banner'
+effects:
+  451429e0-19ef-4dac-a56e-31d82dbac99a:
+    uuid: 451429e0-19ef-4dac-a56e-31d82dbac99a
+    id: image_scale
+    weight: 1
+    data:
+      width: 1000
+      height: 487
+      upscale: false
