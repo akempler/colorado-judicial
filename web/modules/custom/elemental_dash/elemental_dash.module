@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Session\AccountInterface;
 
 /**
  * Implements hook_help().
@@ -30,4 +32,33 @@ function elemental_dash_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'elemental_dash';
     $variables['#attached']['library'][] = 'elemental_dash/elemental_dash';
   }
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function elemental_dash_user_login(AccountInterface $account) {
+
+  $userRoles = $account->getRoles();
+  if (in_array('administrator', $userRoles)) {
+    $role = 'administrator';
+  }
+  else {
+    $role = array_pop($userRoles);
+  }
+
+  $current_request = \Drupal::service('request_stack')->getCurrentRequest();
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name === 'user.login' && ($role)) {
+    $config = \Drupal::config('elemental_dash.settings');
+    $dashboard = $config->get($role);
+    if ($dashboard) {
+      $current_request->query->set(
+        'destination',
+        Url::fromRoute('entity.elemental_dash.canonical', ['elemental_dash' => $dashboard])->toString()
+      );
+    }
+  }
+
 }
